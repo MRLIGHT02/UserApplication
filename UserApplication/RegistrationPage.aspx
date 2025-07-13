@@ -45,7 +45,18 @@
             </tr>
             <tr>
                 <td></td>
-                <td></td>
+                <td>
+                    <asp:GridView runat="server" ID="gvData" AutoGenerateColumns="false" OnRowCommand="gvData_RowCommand">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+
+                    </asp:GridView>
+                </td>
             </tr>
 
         </tbody>

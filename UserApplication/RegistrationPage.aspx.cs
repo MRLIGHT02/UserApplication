@@ -18,5 +18,10 @@ namespace UserApplication
         {
 
         }
+
+        protected void gvData_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
     }
 }
