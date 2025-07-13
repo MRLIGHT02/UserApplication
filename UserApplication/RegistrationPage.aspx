@@ -21,7 +21,7 @@
             <tr>
                 <td>Gender</td>
                 <td>
-                    <asp:RadioButtonList ID="Ugender" runat="server"></asp:RadioButtonList></td>
+                    <asp:RadioButtonList ID="Ugender" runat="server" RepeatDirection="Horizontal"></asp:RadioButtonList></td>
             </tr>
             <tr>
                 <td>Password</td>
@@ -36,7 +36,10 @@
             <tr>
                 <td>Status</td>
                 <td>
-                    <asp:TextBox ID="Ustatus" runat="server"></asp:TextBox></td>
+                    <asp:RadioButtonList ID="Ustatus" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem Text="0" Value="0"></asp:ListItem>
+                        <asp:ListItem Text="1" Value="1"></asp:ListItem>
+                    </asp:RadioButtonList></td>
             </tr>
             <tr>
                 <td></td>
@@ -48,22 +51,22 @@
                 <td>
                     <asp:GridView runat="server" ID="gvData" AutoGenerateColumns="false" OnRowCommand="gvData_RowCommand">
                         <Columns>
-                            <asp:TemplateField>
+                            <asp:TemplateField HeaderText="UserId">
                                 <ItemTemplate>
                                     <%#Eval("uid") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField>
+                            <asp:TemplateField HeaderText="UserName">
                                 <ItemTemplate>
                                     <%#Eval("uname") %>
                                 </ItemTemplate>
-                            </asp:TemplateField>
+                            </asp:TemplateField HeaderText="Email">
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <%#Eval("uemail") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField>
+                            <asp:TemplateField HeaderText="PassWord">
                                 <ItemTemplate>
                                     <%#Eval("uppassword") %>
                                 </ItemTemplate>
