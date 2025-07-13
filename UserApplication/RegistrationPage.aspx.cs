@@ -14,6 +14,10 @@ namespace UserApplication
 
         }
 
+        public void BindGender()
+        {
+            foreach ()
+        }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
 

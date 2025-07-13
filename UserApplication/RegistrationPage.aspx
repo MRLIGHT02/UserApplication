@@ -50,7 +50,52 @@
                         <Columns>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <%#Eval("") %>
+                                    <%#Eval("uid") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("uname") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("uemail") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("uppassword") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("udob") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("ugender") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("ustatus") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("insertDate") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <%#Eval("isDeleted") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button Text='<%#Eval("isDeleted").ToString()=="1"?"Blocked":"Active"%>' runat="server" ID="IsUserBlocked" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
